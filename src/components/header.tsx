@@ -10,7 +10,8 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Contato', page: '/contact' },
 ]
 
-const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
+const ogImageUrl =
+  'https://trello.com/1/cards/64055556f9d60a8f3afc5f7e/attachments/6421d6ae9ce6b0a14a70c5c6/previews/6421d6af9ce6b0a14a70c622/download/DarkLogo.jpeg.jpg'
 
 const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter()
@@ -21,9 +22,9 @@ const Header = ({ titlePre = '' }) => {
         <title>{titlePre ? `${titlePre} |` : ''} BooleStation</title>
         <meta
           name="description"
-          content="An example Next.js site using Notion for the blog"
+          content="Para pensar melhor, domine as leis do pensamento."
         />
-        <meta name="og:title" content="My Notion Blog" />
+        <meta name="og:title" content="Boolestation" />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
