@@ -8,11 +8,11 @@
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #fff;
+  --bg: #1a1a1a;
   --fg: #000;
-  --accents-1: #111;
-  --accents-2: #333;
-  --accents-3: #888;
+  --accents-1: #ffffff;
+  --accents-2: #ffffff;
+  --accents-3: #ffffff;
   --geist-foreground: #000;
 
   --radius: 8px;
@@ -26,6 +26,7 @@
 
 * {
   box-sizing: border-box;
+  color: #fff;
 }
 
 html,
@@ -42,8 +43,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  background-image: radial-gradient(#ddd 1px, transparent 1px),
-    radial-gradient(#ddd 1px, transparent 1px);
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
@@ -310,7 +309,7 @@ h2 {
 }
 
 p {
-  color: #555;
+  color: #fdfdfd;
   font-weight: 400;
   font-size: 0.94rem;
   line-height: 1.7;
