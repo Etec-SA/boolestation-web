@@ -18,10 +18,5 @@ export const data = {
 }
 
 export function Chart() {
-  return (
-    <Pie
-      data={data}
-      title="Você considera Lógic importante para a vida profissional ou acadêmica?"
-    />
-  )
+  return <Pie data={data} />
 }
