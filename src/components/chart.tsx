@@ -1,22 +1,52 @@
-import React from 'react'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-import { Pie } from 'react-chartjs-2'
+import React, { useState } from 'react'
+import {
+  PieChart,
+  pieChartDefaultProps,
+  PieChartProps,
+} from 'react-minimal-pie-chart'
 
-ChartJS.register(ArcElement, Tooltip, Legend)
+function Chart(props: PieChartProps) {
+  const [hovered, setHovered] = useState<number | undefined>(undefined)
 
-export const data = {
-  labels: ['Sim, considero.', 'Não considero.'],
-  datasets: [
-    {
-      label: 'Quantidade de pessoas.',
-      data: [91, 3],
-      backgroundColor: ['rgba(32, 213, 20, 0.2)', 'rgba(211, 11, 22, 0.2)'],
-      borderColor: ['rgba(32, 213, 20, 1)', 'rgba(211, 11, 22, 1)'],
-      borderWidth: 1,
-    },
-  ],
+  const data = props.data.map((entry, i) => {
+    if (hovered === i) {
+      return {
+        ...entry,
+        color: 'grey',
+      }
+    }
+    return entry
+  })
+
+  const lineWidth = 60
+
+  return (
+    <PieChart
+      style={{
+        fontSize: '6px',
+      }}
+      className="h-80 my-5"
+      data={data}
+      radius={pieChartDefaultProps.radius - 6}
+      lineWidth={60}
+      segmentsStyle={{ transition: 'stroke .3s', cursor: 'pointer' }}
+      animate
+      label={({ dataEntry }) => Math.round(dataEntry.percentage) + '%'}
+      labelPosition={100 - lineWidth / 2}
+      labelStyle={{
+        fill: '#fff',
+        opacity: 0.75,
+        pointerEvents: 'none',
+      }}
+      onMouseOver={(_, index) => {
+        setHovered(index)
+      }}
+      onMouseOut={() => {
+        setHovered(undefined)
+      }}
+      startAngle={250}
+    />
+  )
 }
 
-export function Chart() {
-  return <Pie data={data} />
-}
+export default Chart

@@ -1,14 +1,27 @@
+import { TypeAnimation } from 'react-type-animation'
 import ExtLink from '../../components/ext-link'
 
 const BoolestationIntroduction = () => {
   return (
-    <div className="flex justify-around items-center h-screen w-full max-sm:h-[50vh]">
+    <div className="flex justify-around items-center h-[80vh] w-full max-sm:h-[40vh] max-sm:justify-center max-sm:text-center bg-[rgba(0,0,0,0.2)] my-10">
       <div className="p-6 w-7/12 h-64 max-sm:w-full max-sm:h-32">
-        <h4 className="text-4xl max-sm:text-2xl text-white max-sm:hidden">
-          O que é Boolestation?
-        </h4>
+        <TypeAnimation
+          sequence={[
+            // Same substring at the start will only be typed out once, initially
+            'Boolestation: o que é?',
+            1500, // wait 1s before replacing "Mice" with "Hamsters"
+            'Boolestation: onde encontrar?',
+            1500,
+            'Boolestation: como participar?',
+            1500,
+          ]}
+          wrapper="h4"
+          speed={50}
+          className="text-2xl text-lime-400 max-sm:text-sm max-md:text-lg max-xl:text-3xl max-2xl:text-4xl"
+          repeat={Infinity}
+        />
         <br />
-        <p className="max-sm:text-xs text-sm">
+        <p className="max-sm:text-xs max-md:text-sm text-md">
           Boolestation se trata de uma{' '}
           <strong>plataforma para o aprendizado de lógica.</strong> Idealizado
           em 2023 por cinco estudantes da <b>Etec de Peruíbe</b>, o projeto visa
