@@ -5,13 +5,7 @@ const Banner = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center w-full">
-        <Image
-          src={logo}
-          width={1080}
-          height={323}
-          alt="BooleStation Logo"
-          priority
-        />
+        <Image src={logo} width={1080} height={323} alt="BooleStation Logo" />
         <h2 className="text-white">
           Para pensar melhor, domine as leis do pensamento.
         </h2>
