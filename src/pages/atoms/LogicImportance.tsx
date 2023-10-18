@@ -31,7 +31,11 @@ const LogicImportance = () => {
         </div>
         <h4 className="text-center my-8 p-2">
           Uma{' '}
-          <a href="#" target="_blank">
+          <a
+            href="#"
+            target="_blank"
+            className="text-lime-500 underline underline-offset-2"
+          >
             pesquisa de mercado
           </a>{' '}
           foi feita pelo grupo, e a seguinte pergunta foi feita:

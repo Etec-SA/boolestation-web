@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../../../public/DarkLogo.png'
+import logo from '../../../public/DarkLogo.webp'
 
 const Banner = () => {
   return (
