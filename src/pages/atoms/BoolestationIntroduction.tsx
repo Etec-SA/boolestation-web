@@ -1,5 +1,7 @@
 import { TypeAnimation } from 'react-type-animation'
 import ExtLink from '../../components/ext-link'
+import Image from 'next/image'
+import boole from '../../../public/boole.webp'
 
 const BoolestationIntroduction = () => {
   return (
@@ -33,7 +35,7 @@ const BoolestationIntroduction = () => {
       </div>
 
       <div className="boole max-sm:hidden">
-        <img src="./boole.png" height="450" width="450" alt="George Boole" />
+        <Image src={boole} height={316} width={422} alt="George Boole" />
       </div>
     </div>
   )
