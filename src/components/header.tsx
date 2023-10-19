@@ -11,9 +11,6 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Contato', page: '/contact' },
 ]
 
-const ogImageUrl =
-  'https://trello.com/1/cards/64055556f9d60a8f3afc5f7e/attachments/6421d6ae9ce6b0a14a70c5c6/previews/6421d6af9ce6b0a14a70c622/download/DarkLogo.jpeg.jpg'
-
 const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter()
 
@@ -31,7 +28,10 @@ const Header = ({ titlePre = '' }) => {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta
+          property="og:url"
+          content="https://github.com/Etec-SA/boolestation-web"
+        />
         <meta
           property="og:title"
           content="Boolestation: a plataforma para o aprendizado de lógica."
@@ -42,11 +42,14 @@ const Header = ({ titlePre = '' }) => {
         />
         <meta
           property="og:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://github.com/Etec-SA/boolestation-web"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:url"
+          content="https://github.com/Etec-SA/boolestation-web"
+        />
         <meta
           property="twitter:title"
           content="Boolestation: a plataforma para o aprendizado de lógica."
@@ -57,7 +60,7 @@ const Header = ({ titlePre = '' }) => {
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://github.com/Etec-SA/boolestation-web"
         />
       </Head>
       <ul>
