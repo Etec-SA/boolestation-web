@@ -2,7 +2,7 @@ import VerticalLogicTimeLine from '../../components/VerticalTimeline'
 
 const LogicHistory = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <div
         className="w-full h-5 flex justify-center items-center my-12"
         id="timelineTitle"
@@ -12,7 +12,7 @@ const LogicHistory = () => {
         </h3>
       </div>
       <VerticalLogicTimeLine />
-    </>
+    </div>
   )
 }
 
