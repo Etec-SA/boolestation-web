@@ -3,6 +3,7 @@ import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
+import logo from '../../public/DarkLogo.webp'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
@@ -21,13 +22,43 @@ const Header = ({ titlePre = '' }) => {
       <Head>
         <title>{titlePre ? `${titlePre} |` : ''} BooleStation</title>
         <meta
-          name="description"
-          content="Para pensar melhor, domine as leis do pensamento."
+          name="title"
+          content="Boolestation: a plataforma para o aprendizado de lógica."
         />
-        <meta name="og:title" content="Boolestation" />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
+        <meta
+          name="description"
+          content="Para pensar melhor, domine as leis do pensamento"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta
+          property="og:title"
+          content="Boolestation: a plataforma para o aprendizado de lógica."
+        />
+        <meta
+          property="og:description"
+          content="Para pensar melhor, domine as leis do pensamento"
+        />
+        <meta
+          property="og:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:title"
+          content="Boolestation: a plataforma para o aprendizado de lógica."
+        />
+        <meta
+          property="twitter:description"
+          content="Para pensar melhor, domine as leis do pensamento"
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
