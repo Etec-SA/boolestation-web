@@ -8,6 +8,7 @@ import GitHub from '../components/svgs/github'
 import Twitter from '../components/svgs/twitter'
 import Envelope from '../components/svgs/envelope'
 import LinkedIn from '../components/svgs/linkedin'
+import Members from './atoms/Contact'
 
 const contacts = [
   {
@@ -36,6 +37,7 @@ export default function Contact() {
   return (
     <>
       <Header titlePre="Contato" />
+      <Members />
     </>
   )
 }
