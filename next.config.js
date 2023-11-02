@@ -1,5 +1,10 @@
 const fs = require('fs')
 const path = require('path')
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const {
   NOTION_TOKEN,
   BLOG_INDEX_ID,
