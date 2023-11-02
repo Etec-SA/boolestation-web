@@ -29,8 +29,14 @@ const BoolestationIntroduction = () => {
           viabilizar o aprendizado da lógica formal, tornando-o mais prático,
           divertido e fácil. Para conhecer mais acerca do projeto, considere
           visitar nosso{' '}
-          <ExtLink href="https://instagram.com/boolestation">Instagram</ExtLink>{' '}
-          e <ExtLink href="https://github.com/etec-sa/">Github</ExtLink>.
+          <ExtLink href="https://instagram.com/boolestation">
+            <span className="text-lime-500">Instagram</span>
+          </ExtLink>{' '}
+          e{' '}
+          <ExtLink href="https://github.com/etec-sa/">
+            <span className="text-lime-500">Github</span>
+          </ExtLink>
+          .
         </p>
       </div>
 
