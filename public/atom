@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2023-11-02T20:27:38.036Z</updated>
+    <id>My Notion Blog</id>
+    <entry>
+      <id>/blog/outro-post-maneiro</id>
+      <title>Outro post maneiro</title>
+      <link href="/blog/outro-post-maneiro"/>
+      <updated>2023-10-05T00:00:00.549Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>Esse é um teste</p>
+          <p class="more">
+            <a href="/blog/outro-post-maneiro">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Luca Poe</name></author>
+    </entry>
+    <entry>
+      <id>/blog/teste</id>
+      <title>Teste</title>
+      <link href="/blog/teste"/>
+      <updated>2023-10-04T00:00:00.550Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>Hello, World!</p>
+          <p class="more">
+            <a href="/blog/teste">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Luca Poe</name></author>
+    </entry>
+  </feed>

@@ -4,6 +4,8 @@ import LogicHistory from './atoms/LogicHistory'
 import LogicImportance from './atoms/LogicImportance'
 import BoolestationIntroduction from './atoms/BoolestationIntroduction'
 import Banner from './atoms/Banner'
+import LogicArguments from './atoms/LogicArguments'
+import Frege from './atoms/Frege'
 
 export default function Index() {
   return (
@@ -14,6 +16,8 @@ export default function Index() {
         <BoolestationIntroduction />
         <LogicHistory />
         <LogicImportance />
+        <LogicArguments />
+        <Frege />
       </div>
     </>
   )

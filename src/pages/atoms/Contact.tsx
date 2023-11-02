@@ -1,3 +1,8 @@
+import lucaPicture from '../../../public/lucapoe.webp'
+import giovannaPicture from '../../../public/giovanna.webp'
+import pedroPicture from '../../../public/pedro.webp'
+import gamonPicture from '../../../public/gamon.webp'
+import eduardoPicture from '../../../public/eduardo.webp'
 import { AiFillGithub, AiOutlineInstagram } from 'react-icons/ai'
 import ExtLink from '../../components/ext-link'
 
@@ -6,7 +11,7 @@ interface TeamMemberProps {
   role: 'Scrum Master' | 'Product Owner' | 'Developer'
   phrase: string
   socialMedia: string[]
-  photoUrl: string
+  photoUrl: StaticImageData
 }
 
 const TeamMembers: TeamMemberProps[] = [
@@ -18,41 +23,40 @@ const TeamMembers: TeamMemberProps[] = [
       'https://github.com/eduuuNk',
       'https://instagram.com/eduuu_kkj',
     ],
-    photoUrl:
-      'https://hips.hearstapps.com/hmg-prod/images/gettyimages-514975318.jpg?crop=1xw:1.0xh;center,top&resize=640:*',
+    photoUrl: eduardoPicture,
   },
   {
     name: 'Luca Poe',
     role: 'Scrum Master',
-    phrase: 'Se a verdade os mata, deixe-os morrer.',
+    phrase:
+      'Sapere Aude! Tenha coragem de fazer uso do teu próprio entendimento.',
     socialMedia: [
       'https://github.com/iamthepoe',
       'https://instagram.com/lvcapoe',
     ],
-    photoUrl:
-      'https://br.web.img3.acsta.net/c_310_420/pictures/15/07/20/18/14/582462.jpg',
+    photoUrl: lucaPicture,
   },
   {
     name: 'Giovanna Nunes',
     role: 'Product Owner',
-    phrase: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    phrase:
+      'O risco do fracasso foi o preço que escolhi, pois o preço de nunca ir não podia suportar.',
     socialMedia: [
       'https://github.com/GiovannaNO',
       'https://instagram.com/giovanna10nunes',
     ],
-    photoUrl:
-      'https://i.em.com.br/0KnhIQUwMdjoWt1F38YBBP9-9xw=/1200x900/smart/imgsapp.em.com.br/app/noticia_127983242361/2022/12/15/1433846/monark-foi-integrante-do-flow-podcast_1_67873.jpg',
+    photoUrl: giovannaPicture,
   },
   {
     name: 'Gabriel Gamon',
     role: 'Developer',
-    phrase: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    phrase:
+      'Eu me utilizo de todos os meios da Sociedade de consumo, penetro no Sistema, mas como um veneno.',
     socialMedia: [
       'https://github.com/devgamon',
       'https://www.instagram.com/yongemici',
     ],
-    photoUrl:
-      'https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/92/45/01/20200286.jpg',
+    photoUrl: gamonPicture,
   },
   {
     name: 'Pedro Vitor',
@@ -63,8 +67,7 @@ const TeamMembers: TeamMemberProps[] = [
       'https://github.com/PedroLeGarcia',
       'https://instagram.com/pedro_le_garcia',
     ],
-    photoUrl:
-      'https://m.media-amazon.com/images/M/MV5BZTJhNjc2YWItNTIwMC00ZjlmLWFjOTAtMWUzODAwZjIyOTdkXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg',
+    photoUrl: pedroPicture,
   },
 ]
 
@@ -79,7 +82,7 @@ const TeamMember = (props: TeamMemberProps) => {
           <div
             className="w-[165px] h-[165px] bg-white rounded-full bg-center bg-cover"
             id="memberPhoto"
-            style={{ backgroundImage: `url(${props.photoUrl})` }}
+            style={{ backgroundImage: `url(${props.photoUrl.src})` }}
           ></div>
         </div>
 
@@ -91,16 +94,24 @@ const TeamMember = (props: TeamMemberProps) => {
           <small id="role" className="text-lime-300">
             {props.role}
           </small>
-          <p className="text-xs">{props.phrase}</p>
+          <div className="w-full h-11 p-3 flex items-center">
+            <p className="text-xs">{props.phrase}</p>
+          </div>
           <div
             id="social-media"
             className="flex w-full h-full justify-center gap-3"
           >
-            <ExtLink href={props.socialMedia[0]}>
-              <AiFillGithub size={40} />
+            <ExtLink
+              href={props.socialMedia[0]}
+              aria-label={`Acesse o Github de ${props.name}`}
+            >
+              <AiFillGithub size={40} aria-label="Ícone do Github" />
             </ExtLink>
-            <ExtLink href={props.socialMedia[1]}>
-              <AiOutlineInstagram size={40} />
+            <ExtLink
+              href={props.socialMedia[1]}
+              aria-label={`Acesse o Instagram de ${props.name}`}
+            >
+              <AiOutlineInstagram size={40} aria-label="Ícone do Instagram" />
             </ExtLink>
           </div>
         </div>

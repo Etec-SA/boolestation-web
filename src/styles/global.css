@@ -8,7 +8,7 @@
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #0e0d0d;
+  --bg: #1b1b1b;
   --fg: #000;
   --accents-1: #ffffff;
   --accents-2: #ffffff;
@@ -324,7 +324,6 @@ pre :global(code) {
 
 code {
   font-size: 0.8rem;
-  background: #f1f1f1;
   padding: 0.2rem;
   border-radius: var(--radius);
   font-family: var(--font-mono);
