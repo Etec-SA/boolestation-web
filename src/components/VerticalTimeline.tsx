@@ -21,34 +21,35 @@ const VerticalLogicTimeLine = () => {
       date: '150 a.C',
     },
     {
-      title: 'Aristóteles',
+      title: 'Euclides',
       subTitle: 'Grécia Antiga',
       content:
-        'Aristóteles cria sua teoria dos silogismos e seu "Órganon", a teoria da lógica.',
-      date: '150 a.C',
+        'Euclides desenvolve os fundamentos da geometria e lógica em "Elementos".',
+      date: '300 a.C',
     },
     {
-      title: 'Aristóteles',
-      subTitle: 'Grécia Antiga',
+      title: 'Boécio',
+      subTitle: 'Roma Antiga',
       content:
-        'Aristóteles cria sua teoria dos silogismos e seu "Órganon", a teoria da lógica.',
-      date: '150 a.C',
+        'Boécio contribui para a lógica com sua obra "Consolação da Filosofia" e tradução de textos lógicos gregos.',
+      date: '480 d.C',
     },
     {
-      title: 'Aristóteles',
-      subTitle: 'Grécia Antiga',
+      title: 'Frege',
+      subTitle: 'Século XIX',
       content:
-        'Aristóteles cria sua teoria dos silogismos e seu "Órganon", a teoria da lógica.',
-      date: '150 a.C',
+        'Gottlob Frege introduz a lógica de predicados e fundamenta a lógica moderna.',
+      date: '1848',
     },
     {
-      title: 'Aristóteles',
-      subTitle: 'Grécia Antiga',
+      title: 'Russell e Whitehead',
+      subTitle: 'Século XX',
       content:
-        'Aristóteles cria sua teoria dos silogismos e seu "Órganon", a teoria da lógica.',
-      date: '150 a.C',
+        'Bertrand Russell e Alfred North Whitehead publicam "Principia Mathematica", uma obra fundamental na lógica matemática.',
+      date: '1910',
     },
-  ]
+  ];
+
 
   return (
     <VerticalTimeline lineColor={'#f1f1f1'}>
